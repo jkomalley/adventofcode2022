@@ -4,13 +4,13 @@ with open("day1/day1_input.txt", encoding='utf8') as file:
     lines_s = file.readlines()
 
 cal_counts = []
-cur_cal_count = 0
+C = 0
 for l in lines_s:
     if l != '\n':
-        cur_cal_count += int(l.strip())
+        C += int(l.strip())
     else:
-        cal_counts.append(cur_cal_count)
-        cur_cal_count = 0
+        cal_counts.append(C)
+        C = 0
 
 cal_counts.sort()
 
