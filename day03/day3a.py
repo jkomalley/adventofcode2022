@@ -3,7 +3,7 @@ def main():
     """main function"""
     priority_sum = 0
 
-    with open("day3/day3_input.txt", encoding='utf8') as file:
+    with open("day03/day3_input.txt", encoding='utf8') as file:
         lines = file.readlines()
     # find common items between compartments and add up priorities
     for line in lines:

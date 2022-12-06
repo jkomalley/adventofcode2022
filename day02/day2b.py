@@ -5,7 +5,7 @@ SCISSORS = "C"
 
 def main():
     """ main function """
-    with open("day2/day2_input.txt", encoding='utf8') as file:
+    with open("day02/day2_input.txt", encoding='utf8') as file:
         lines = file.readlines()
 
     my_score = 0

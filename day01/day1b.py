@@ -1,6 +1,6 @@
 """Adevnt of Code 2022 Day 1b"""
 
-with open("day1/day1_input.txt", encoding='utf8') as file:
+with open("day01/day1_input.txt", encoding='utf8') as file:
     lines_s = file.readlines()
 
 cal_counts = []
