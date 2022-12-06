@@ -1,4 +1,4 @@
-""" Adevnt of Code 2022 Day 2a """
+""" Adevnt of Code 2022 Day 2b """
 ROCK = "A"
 PAPER = "B"
 SCISSORS = "C"
