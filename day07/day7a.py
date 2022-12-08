@@ -29,8 +29,8 @@ def main():
             if cur_dir_s in directories:
                 directories[cur_dir_s] = directories.get(cur_dir_s) + size
 
+    # find all dirs of the right size and add their sizes for the answer
     answer = 0
-
     for size in directories.values():
         if size <= 100000:
             answer += size
