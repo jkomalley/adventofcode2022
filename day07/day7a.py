@@ -29,12 +29,18 @@ def main():
             if cur_dir_s in directories:
                 directories[cur_dir_s] = directories.get(cur_dir_s) + size
 
+    #if cur_dir isnt the base dir, do "cd .." until it is to add sub dir sizes to parent dirs
+    while len(cur_dir) != 1:
+        prev_dir_s = list_to_str(cur_dir)
+        cur_dir.pop()
+        cur_dir_s = list_to_str(cur_dir)
+        directories[cur_dir_s] = directories.get(cur_dir_s) + directories.get(prev_dir_s)
+
     # find all dirs of the right size and add their sizes for the answer
     answer = 0
     for size in directories.values():
         if size <= 100000:
             answer += size
-    
     print("Answer: ", answer)
 
 def list_to_str(dir_list):
