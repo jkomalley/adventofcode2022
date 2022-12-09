@@ -5,12 +5,6 @@ import math
 head = [0,0]
 tail = [0,0]
 
-grid = [[0,0,0,0,0,0],
-        [0,0,0,0,0,0],
-        [0,0,0,0,0,0],
-        [0,0,0,0,0,0],
-        [0,0,0,0,0,0]]
-
 def main():
     """main function"""
     with open("day09/day9_input.txt", encoding='utf-8') as file:
@@ -37,7 +31,7 @@ def main():
             tail_locations.append(" ".join(str(val) for val in tail))
 
             # print_grid()
-    
+
     num_visited = len(set(tail_locations))
 
     print("Num tail visited: ", num_visited)
@@ -66,10 +60,15 @@ def distance(point_a, point_b):
     x_part_squared = x_part * x_part
     y_part = point_b[1] - point_a[1]
     y_part_squared = y_part * y_part
-    return math.floor(math.sqrt(x_part_squared + y_part_squared)) 
+    return math.floor(math.sqrt(x_part_squared + y_part_squared))
 
 def print_grid():
-    """print grid"""
+    """print grid (only use for small input)"""
+    grid = [[0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0]]
     print("head: ", head)
     print("tail: ", tail)
     grid[tail[0]][tail[1]] = 2
