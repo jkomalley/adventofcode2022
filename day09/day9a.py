@@ -39,9 +39,10 @@ def main():
 def update_tail():
     """update location of tail"""
     dis = distance(head, tail)
-
+    print("distance: ", dis)
     if dis > 1:
-        if
+        tail[0] = tail[0] + (head[0] - tail[0])
+        tail[1] = tail[1] + (head[1] - tail[1])
 
 def distance(point_a, point_b):
     """ret distance between point_a and point_b"""
@@ -53,6 +54,9 @@ def distance(point_a, point_b):
 
 def print_grid():
     """print grid"""
+    print("head: ", head)
+    print("tail: ", tail)
+    grid[tail[0]][tail[1]] = 2
     grid[head[0]][head[1]] = 1
     print("-"*100)
     grid.reverse()
@@ -64,6 +68,7 @@ def print_grid():
         # row.reverse()
     grid.reverse()
     print("-"*100)
+    grid[tail[0]][tail[1]] = 0
     grid[head[0]][head[1]] = 0
 
 if __name__=="__main__":
