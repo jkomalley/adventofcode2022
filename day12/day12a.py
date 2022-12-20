@@ -47,7 +47,7 @@ def main():
 
     #get start and end points
     start = []
-
+    end = []
     for y_index in range(0, len(grid), 1):
         for x_index in range(0, len(grid[y_index])):
             if grid[y_index][x_index] == 'S':
