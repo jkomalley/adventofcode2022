@@ -1,7 +1,7 @@
-"""Advent of code day 12a"""
+"""Advent of code day 12b"""
 
 def find_path(start_location, grid):
-    """find a path from the start to the finish"""
+    """find shortest path from the any 'a' to the finish"""
 
     visited_blocks = []
     blocks_queue = []
@@ -46,7 +46,7 @@ def main():
         for char in line:
             grid[cur_line].append(char)
 
-    #get start and end points
+    #get start point
     start = []
 
     for y_index in range(0, len(grid), 1):
