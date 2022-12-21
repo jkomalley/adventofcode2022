@@ -72,8 +72,8 @@ def main():
     for pair_string in pairs_string:
         first_string, second_string = pair_string.split("\n")
 
-        first_pair = literal_eval(first_string)#make_list(first_string)
-        second_pair = literal_eval(second_string)#make_list(second_string)
+        first_pair = literal_eval(first_string)
+        second_pair = literal_eval(second_string)
 
         pairs.append([first_pair, second_pair])
 
